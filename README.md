@@ -20,3 +20,10 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+## 作る予定のもの
+ランキングサイト
+＞ABテストを促進するため
+
+ルービックキューブ的デザイン
+＞記憶の宮殿的思考をするため

@@ -71,7 +71,17 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {extend(config: any, ctx: any) {}},
+  build: {extend(config: any, ctx: any) {
+         // Run ESLint on save
+         if (ctx.isDev && ctx.isClient) {
+           config.module.rules.push({
+             enforce: 'pre',
+             test: /\.(js|ts|vue)$/,
+             loader: 'eslint-loader',
+             exclude: /(node_modules)/
+           })
+         }
+        }},
 
    typescript: {
   typeCheck: true,

@@ -4,17 +4,18 @@ module.exports = {
     browser: true,
     node: true,
   },
-  parserOptions: {
-    parser: 'babel-eslint',
-  },
+
   extends: [
-    '@nuxtjs',
+    '@nuxtjs/eslint-config-typescript',
     'prettier',
     'prettier/vue',
     'plugin:prettier/recommended',
     'plugin:nuxt/recommended',
   ],
-  plugins: ['prettier'],
+  plugins: ['vue','prettier'],
   // add your custom rules here
-  rules: {},
+  rules: { 'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+   'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+   'generator-star-spacing': 'off',
+   'prettier/prettier': 'error'},
 }
